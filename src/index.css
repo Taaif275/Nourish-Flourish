@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.auth-page {
+  background-image: url('/src/Logsign/asssets/bg.jpg') !important;
+}
+/* Ensure the main container takes up the full viewport height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height of the viewport */
+}
+
+/* Ensures content expands and pushes footer down */
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Centers Card1 horizontally */
+  align-items: center; /* Centers Card1 vertically */
+  padding: 20px;
+}
+

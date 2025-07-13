@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+/* TeamPage.css */
+
+.team-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+  
+  .team-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    animation: tr linear;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+  }
+  
+  .team-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* Ensures all names stay in one row */
+    overflow-x: auto; /* Allows scrolling if content overflows */
+    padding: 10px;
+    animation: tr linear;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+  }
+  
+  .team-card {
+    background: #9ACD32;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
+    border: 2px solid;
+   
+  }
+  
+  .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+  }
+
+  .rec {
+    display: flex;
+    justify-content: center; /* Centers the section */
+    align-items: center;
+    background-color: #AC1754;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 450px; /* Adjust height as needed */
+    padding: 20px;
+    gap: 70px; /* Space between image and text */
+    
+  }
+  
+  .details-card {
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    text-align: center; /* Centering text and button */
+    display: flex;
+    flex-direction: column; /* Stacks content */
+    align-items: center;
+    animation: tr linear;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+  }
+  
+  .recipe-titlee {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Pacifico", cursive;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: whitesmoke;
+    margin-bottom: 15px; /* Adds space between text and button */
+  }
+  
+/* Recipe Button */
+.recipe-button {
+  background-color: #e34f63; /* Dark pink */
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.recipe-button:hover {
+  background-color: #c93d54; /* Slightly darker pink */
+  transform: scaleX(1.1); /* Expands slightly on hover */
+  border-radius: 20px; /* Soft rounded corners */
+}
+
+  
+  .image-card {
+    width: 300px;
+    height: 390px;
+    background-image: url('https://img.freepik.com/free-photo/top-view-grated-sliced-whole-potatoes-around-note-pad-with-salt-black-pepper-wooden-surface-with-copy-space_141793-10583.jpg?ga=GA1.1.1063396785.1723545078&semt=ais_hybrid');
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: tr linear;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+  }
+  
+   .h21 {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Pacifico", cursive; /* Cursive font */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+  }
+
+  @keyframes tr {
+    from{
+      opacity: 0.7;
+      transform: translateX(80px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  
+  }
+
+/* About Us Section */
+.About {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 40px;
+  min-height: 50vh; /* Ensures full height for centering */
+}
+
+.about-us {
+  width: 90%; /* Increase width */
+  max-width: 1200px; /* Allows it to be wider */
+  padding: 60px; /* Slightly larger padding */
+  background-color: #FDD2E0; /* Soft Pink Background */
+  color: #5A2B3F; /* Dark Burgundy Text */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 4px solid #5A2B3F;
+  animation: ab linear;
+  animation-timeline:view() ;
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes ab {
+  from{
+    opacity: 0.4;
+    transform: translateY(180px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #AC1754; /* Deep Pink Title */
+}
+
+/* Flexbox for Text Containers */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual Text Blocks */
+.about-text {
+  flex: 1 1 30%;
+  min-width: 300px;
+  background-color: white; /* White Box for Text */
+  padding: 20px;
+  border-radius: 10px;
+  color: #5A2B3F; /* Dark Burgundy Text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Highlights in the Text */
+.about-text strong {
+  color: #AC1754; /* Deep Pink for Highlighted Words */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us {
+      padding: 30px;
+  }
+
+  .about-title {
+      font-size: 1.8rem;
+  }
+
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-text {
+      width: 90%;
+      font-size: 1rem;
+      padding: 15px;
+  }
+}
+
+
+
+
+

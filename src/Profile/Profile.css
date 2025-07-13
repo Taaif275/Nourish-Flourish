@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #6abf69, #519e51);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background-color: #519e51;
+}
+
+/* Profile Container (Centers Profile Content) */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; 
+    padding: 20px;
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Profile Content (Holds Profile & Chart) */
+.profile-content {
+    display: flex;
+    flex-direction: row; /* Keeps cards side by side */
+    justify-content: center; /* Centers both cards */
+    align-items: center; /* Aligns vertically */
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    max-width: 900px;
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    flex: 1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    border-left: 6px solid #6abf69;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Input Fields in Edit Mode */
+.profile-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.profile-card .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.profile-card button {
+    background: linear-gradient(135deg, #6abf69, #519e51);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card button:hover {
+    background: linear-gradient(135deg, #519e51, #3e8141);
+    transform: scale(1.05);
+}
+
+/* Cancel Button */
+.profile-card .cancel-btn {
+    background: #b3b3b3;
+}
+
+.profile-card .cancel-btn:hover {
+    background: #8a8a8a;
+}
+
+/* BMI Chart Card */
+.bmi-chart-container {
+    flex: 1;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    border-left: 6px solid #6abf69;
+}
+
+.bmi-chart-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Gauge Title */
+.bmi-chart-container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2b2b2b;
+}
+
+/* Gauge Chart */
+.bmi-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card, .bmi-chart-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+/* Parent Container */
+.profile-content2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Common Card Style */
+.progress-section,
+.nutrition-section {
+  background: white;
+  height: 568px; /* Prevents collapsing */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px; /* Ensure equal width for both cards */
+  border-left: 6px solid #6abf69;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Ensures they take up equal space */
+}
+
+/* Prevents sections from collapsing */
+.progress-section:empty,
+.nutrition-section:empty {
+  min-height: 568px; /* Ensures height */
+}
+
+/* Hover Effect */
+.progress-section:hover,
+.nutrition-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Force Empty Sections to Show Evenly */
+.progress-section:empty::before,
+.nutrition-section:empty::before {
+  content: "No Data Available";
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  text-align: center;
+  display: block;
+}
+
+
+
+/* Ensuring consistency in layout */
+.bmi-tracker-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-progress {
+  width: 120px;
+  height: 120px;
+  margin: 10px auto;
+}
+
+.h37 {
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+.bmi-message {
+  font-size: 15px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Recommended Plans */
+.recommended-plans-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.recommended-plans-list li {
+  background: greenyellow;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Nutrition Plans Container */
+.nutrition-plans-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  color: #3b5e20;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+}
+
+/* Title */
+.nutrition-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9acd32;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Selected Plan Card */
+.selected-plan-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 150px; /* Ensures consistent height when no plan is selected */
+}
+
+/* Hover Effect */
+.selected-plan-card:hover {
+  transform: scale(1.02);
+}
+
+/* Plan Name */
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Plan Image */
+.plan-image {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  display: block;
+}
+
+/* No Plan Selected Message */
+.no-plan-selected {
+  font-size: 1.2rem;
+  color: #d9534f;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+
+.select-plan-btn {
+  background: linear-gradient(135deg, #6abf69, #519e51);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.select-plan-btn:hover {
+  background: linear-gradient(135deg, #519e51, #3e8141);
+  transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout-button {
+  background: #d9534f; /* Red color for logout */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+  align-self: center; /* Ensures it stays at the bottom */
+}
+
+.logout-button:hover {
+  background: #c9302c; /* Darker red */
+  transform: scale(1.05);
+}
+
+/* Ensures the logout button stays at the bottom */
+.logout-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+

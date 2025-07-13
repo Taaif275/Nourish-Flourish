@@ -1,0 +1,144 @@
+/* General Styling */
+.meal-plan-container {
+    max-width: 100%;
+    padding: 40px;
+    background-color: #f5ffe0; /* Light yellow-green background */
+    color: #3b5e20; /* Dark green text */
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  /* Meal Plan Title */
+  .meal-plan-container .meal-plan-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6b8e23; /* Olive green */
+    margin-bottom: 20px;
+  }
+  
+  /* Meal Plan Image */
+  .meal-plan-container .meal-plan-image {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Section Titles */
+  .meal-plan-container .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9acd32; /* Yellow-green */
+    margin-top: 30px;
+    border-bottom: 2px solid #6b8e23;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Lists */
+  .meal-plan-container .dish-list,
+  .meal-plan-container .micronutrient-list,
+  .meal-plan-container .alternative-meals,
+  .meal-plan-container .allergen-info {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .meal-plan-container .dish-item,
+  .meal-plan-container .micronutrient-list li,
+  .meal-plan-container .alternative-meals li,
+  .meal-plan-container .allergen-info li {
+    font-size: 1.2rem;
+    padding: 8px;
+    background: #e6f4c8; /* Soft yellow-green */
+    border-radius: 10px;
+    margin: 5px auto;
+    width: 60%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Nutrition Info */
+  .meal-plan-container .nutrition-info {
+    background: #f0ffdb; /* Light green */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  /* Buttons */
+  .meal-plan-container .back-button {
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 20px 10px;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+  
+  /* Select Plan Button */
+  .meal-plan-container .select-plan-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 20px 10px;
+    border-radius: 30px;
+    transition: 0.3s;
+    background: #9acd32; /* Yellow-green */
+    color: white;
+    border: none;
+  }
+  
+  .meal-plan-container .select-plan-btn:hover {
+    background: #b2d732; /* Brighter yellow-green */
+  }
+  
+  /* Selected State */
+  .meal-plan-container .select-plan-btn.selected {
+    background: #6b8e23; /* Olive green */
+    cursor: not-allowed;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    background: #e84118;
+}
